@@ -3,15 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 
-[System.Serializable]
-public class AudioZone
+namespace Albarnie.AmbientSound
 {
-    public string name = "AudioZone";
+    [System.Serializable]
+    public class AudioZone
+    {
+        public string name = "AudioZone";
 
-    public float volume = 1f;
+        public float volume = 1f;
 
-    public AudioMixerSnapshot snapshot;
-    public AudioClip ambientSound;
+        public AudioMixerSnapshot snapshot;
+        public AudioClip ambientSound;
 
-    public float blendTime = 5f;
+        public float blendTime = 5f;
+    }
 }

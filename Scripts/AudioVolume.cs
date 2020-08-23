@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AudioVolume : MonoBehaviour
+namespace Albarnie.AmbientSound
 {
-    public AudioZone zone;
+    public class AudioVolume : MonoBehaviour
+    {
+        public AudioZone zone;
+    }
 }

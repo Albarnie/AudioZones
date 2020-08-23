@@ -2,20 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AmbientSound : MonoBehaviour
+namespace Albarnie.AmbientSound
 {
-    AudioSource source;
-
-    [SerializeField]
-    float minPitch = 0.9f,
-        maxPitch = 1.1f;
-
-    private void Awake()
+    public class AmbientSound : MonoBehaviour
     {
-        source = GetComponent<AudioSource>();
+        AudioSource source;
 
-        source.pitch *= Random.Range(minPitch, maxPitch);
+        [SerializeField]
+        float minPitch = 0.9f,
+            maxPitch = 1.1f;
 
-        source.time = Random.Range(0, source.clip.length);
+        private void Awake()
+        {
+            source = GetComponent<AudioSource>();
+
+            source.pitch *= Random.Range(minPitch, maxPitch);
+
+            source.time = Random.Range(0, source.clip.length);
+        }
     }
 }
